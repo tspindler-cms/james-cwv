@@ -1,0 +1,6 @@
+model = {
+	lods = {		
+		{"hepburn_dcs.edm", 1000000.00}; 
+	};
+	collision_shell = "hepburn_collision.edm";
+}
