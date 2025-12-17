@@ -78,8 +78,8 @@ GT.airFindDist = 45000; -- Max detenction range air threats (meters)
 
 -- weapon systems
 GT.WS = {}
-GT.WS.maxTargetDetectionRange = 250000;
-GT.WS.radar_type = 102
+GT.WS.maxTargetDetectionRange = 250000
+GT.WS.radar_type = 104 -- 102
 GT.WS.searchRadarMaxElevation = math.rad(60);
 GT.WS.searchRadarFrequencies = {{50.0e6, 54.0e6}, {2.0e9, 2.2e9}}
 
@@ -272,7 +272,7 @@ GT.DisplayNameShort = _("Knox class (CIWS)"); -- Label name
 GT.Rate = 3000.000000;
 
 GT.Sensors = {  OPTIC = {"long-range naval optics", "long-range naval LLTV", "long-range naval FLIR", "long-range air defence optics"}, --optics types
-                RADAR = {"ticonderoga search radar"}, --radar types
+                RADAR = {"ticonderoga search radar", "seasparrow tr"}, --radar types
 };
 GT.sensor = {};
 set_recursive_metatable(GT.sensor, GT_t.SN_visual);
