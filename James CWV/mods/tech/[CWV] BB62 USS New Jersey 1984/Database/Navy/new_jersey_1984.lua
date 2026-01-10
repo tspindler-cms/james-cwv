@@ -186,7 +186,7 @@ GT_t.LN_t.ship_mk12_127mm.type = 6
 GT_t.LN_t.ship_mk12_127mm.distanceMin = 20
 GT_t.LN_t.ship_mk12_127mm.distanceMax = 16642
 GT_t.LN_t.ship_mk12_127mm.max_trg_alt = 5410
-GT_t.LN_t.ship_mk12_127mm.reactionTime = 12
+GT_t.LN_t.ship_mk12_127mm.reactionTime = 4
 GT_t.LN_t.ship_mk12_127mm.sensor = {}
 set_recursive_metatable(GT_t.LN_t.ship_mk12_127mm.sensor, GT_t.WSN_t[10])
 GT_t.LN_t.ship_mk12_127mm.PL = {}
