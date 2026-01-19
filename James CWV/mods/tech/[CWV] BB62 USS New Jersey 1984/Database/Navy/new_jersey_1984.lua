@@ -40,7 +40,7 @@ GT.ICLS = true; -- IF it has ICLS say true if not say false or not have this ent
 GT.ICLS_Localizer_position =  {-131.55, 12, 29.947, 242.25}
 GT.ICLS_Glideslope_position = {-88.99, 8.90, 0, 3.5}
 
-GT.distFindObstacles = 148.7;
+GT.distFindObstacles = 150.0;
 
 -- Aircraft complement
 GT.numParking		= 1;
