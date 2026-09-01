@@ -4,7 +4,7 @@ declare_plugin("tetet_IX514",
 dirName       = current_mod_path,
 displayName   = _("USS IX514"),
 shortName     = "IX514",
-version       = "0.0.5",
+version       = "0.0.6",
 state         = "installed",
 installed     = true, -- if false that will be place holder , or advertising
 developerName = "TeTeT, FMD, Odyseus",

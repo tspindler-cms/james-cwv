@@ -3,7 +3,7 @@ declare_plugin("tetet_maddox_64",
 dirName		  = current_mod_path,
 displayName   = _("USS Maddox"),
 shortName	  = "Maddox",
-version		  = "0.0.5",
+version		  = "0.0.6",
 state		  = "installed",
 fileMenuName  = _("CWV_Maddox"),
 developerName = "TeTeT",
@@ -13,7 +13,7 @@ encyclopedia_path = current_mod_path .. '/Encyclopedia',
 Skins =
 {
 	 {
-	     name  = "Maddox",
+	     name  = "DD-731 1964",
 		 dir   = "Skins/1"
 	 },
 },

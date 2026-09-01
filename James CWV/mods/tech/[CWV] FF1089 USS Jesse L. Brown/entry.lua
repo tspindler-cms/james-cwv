@@ -3,7 +3,7 @@ declare_plugin("jjj_JLB_89",
 dirName		  = current_mod_path,
 displayName   = _("USS Jesse L. Brown"),
 shortName	  = "Jesse L. Brown",
-version		  = "0.0.5",
+version		  = "0.0.6",
 state		  = "installed",
 fileMenuName  = _("CWV_JLB"),
 developerName = "James J Jackson",
@@ -13,7 +13,7 @@ encyclopedia_path = current_mod_path .. '/Encyclopedia',
 Skins =
 {
 	 {
-	     name  = "JLB",
+	     name  = "FF-1089 1989",
 		 dir   = "Skins/1"
 	 },
 },

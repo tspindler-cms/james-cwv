@@ -3,7 +3,7 @@ declare_plugin("jjj_Hepburn_91",
 dirName		  = current_mod_path,
 displayName   = _("USS Hepburn"),
 shortName	  = "Hepburn",
-version		  = "0.0.5",
+version		  = "0.0.6",
 state		  = "installed",
 fileMenuName  = _("CWV_Hepburn"),
 developerName = "James J Jackson",
@@ -13,7 +13,7 @@ encyclopedia_path = current_mod_path .. '/Encyclopedia',
 Skins =
 {
 	 {
-	     name  = "Hepburn",
+	     name  = "FF-1055 1991",
 		 dir   = "Skins/1"
 	 },
 },

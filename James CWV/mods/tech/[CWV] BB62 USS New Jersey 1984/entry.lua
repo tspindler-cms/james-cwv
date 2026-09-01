@@ -3,7 +3,7 @@ declare_plugin("JJJ_new_jersey_84",
 dirName		  = current_mod_path,
 displayName   = _("USS New Jersey"),
 shortName	  = "Big J",
-version		  = "0.0.5",
+version		  = "0.0.6",
 state		  = "installed",
 fileMenuName  = _("cwv_New_Jersey"),
 developerName = "James J Jackson",
@@ -13,7 +13,7 @@ encyclopedia_path = current_mod_path .. '/Encyclopedia',
 Skins =
 {
 	 {
-	     name  = "New_Jersey_1984",
+	     name  = "BB-62 1984",
 		 dir   = "Skins/1"
 	 },
 },

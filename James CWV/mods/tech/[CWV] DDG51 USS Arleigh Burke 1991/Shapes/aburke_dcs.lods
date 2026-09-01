@@ -1,0 +1,8 @@
+model = {
+	lods = {
+		{"aburke_dcs.edm",1000.000000},
+		{"aburke_5km_dcs.edm",3000.000000},
+		{"aburke_5km_dcs.edm",50000.000000},				
+	};
+	collision_shell = "aburke_dcs_Collision.edm";
+}
