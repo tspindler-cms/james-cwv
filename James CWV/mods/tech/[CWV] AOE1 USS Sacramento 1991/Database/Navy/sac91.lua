@@ -284,7 +284,7 @@ GT.Categories		= {
 };
 				
 -- categories in the mission editor 
-GT.tags  = 
+GT.tags  =
 {
-	"Cruiser",
+	"Support",
 };
