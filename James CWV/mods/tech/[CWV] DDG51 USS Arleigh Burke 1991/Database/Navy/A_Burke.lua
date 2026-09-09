@@ -3,6 +3,7 @@
 GT = {};
 dofile(current_mod_path..'/Database/scripts/A_Burke_RunwaysAndRoutes.lua') -- the runways and taxiway lua file
 GT_t.ws = 0;
+GT.virtualStwID_names = { [1] = _("Front"), [2] = _("Back"), }
 
 set_recursive_metatable(GT, GT_t.generic_ship)
 
@@ -146,6 +147,7 @@ GT_t.LN_t.ship_mk45_127mm.PL[1] = {
 						}
 ---------------------------------------------------- MK45 5"54 Main Guns ---------------------------------------------
 --Front turret;
+--GT.WS[1].LN[1]
 ws = GT_t.inc_ws();
 GT.WS[ws] = {}
 GT.WS[ws].area = 'GUN1'
@@ -173,6 +175,7 @@ __LN.BR = {{ connector_name = 'POINT_MK45_1',
 -------------------------------------------------------- MK15 CIWS System -------------------------------------------
 
 -- CIWS Phalanxs
+--GT.WS[2].LN[1]
 ws = GT_t.inc_ws();
 GT.WS[ws] = {}
 set_recursive_metatable(GT.WS[ws], GT_t.WS_t.phalanx )
@@ -186,6 +189,7 @@ GT.WS[ws].reference_angle_Y = math.rad(0);
 GT.WS[ws].LN[1].fireAnimationArgument = 1213;
 GT.WS[ws].LN[1].BR[1].connector_name = 'POINT_CIWS_1'
 
+--GT.WS[3].LN[1]
 ws = GT_t.inc_ws();
 GT.WS[ws] = {}
 set_recursive_metatable(GT.WS[ws], GT_t.WS_t.phalanx )
@@ -200,6 +204,7 @@ GT.WS[ws].LN[1].fireAnimationArgument = 1223;
 GT.WS[ws].LN[1].BR[1].connector_name = 'POINT_CIWS_2'
 
 ------------------------------------------- RGM-84 Harpoon Launchers ---------------------------------------------------
+--GT.WS[4].LN[1]
 ws = GT_t.inc_ws();
 GT.WS[ws] = {}
 set_recursive_metatable(GT.WS[ws], GT_t.WS_t.ship_HARPOON )
@@ -227,6 +232,7 @@ GT.WS[ws].LN[1].BR = {
 
 -----------------------------------------------------------------------------------------------------------------------------
 -- AIGES trackers
+--GT.WS[5-14]
 ws = GT_t.inc_ws();
 local first_JJSPY1_tracker_id = ws;
 GT.WS[ws] = {
@@ -247,7 +253,7 @@ GT.WS[ws] = {
 			reflection_limit = 0.03,
 			ECM_K = 0.6,
 			min_trg_alt = 5,
-			max_trg_alt = 100000,
+			max_trg_alt = 60000,
 			max_number_of_missiles_channels = 82,
 			beamWidth = math.rad(90);
 		}
@@ -255,7 +261,7 @@ GT.WS[ws] = {
 };
 local JJSPY1_tracker_ws = {{{'self', ws}}}
 
-for i=2,24 do
+for i=2,10 do
 	ws = GT_t.inc_ws();
 	GT.WS[ws] = {};
 	set_recursive_metatable(GT.WS[ws], GT.WS[first_JJSPY1_tracker_id]);
@@ -365,6 +371,7 @@ local A_Burke_rear_cells = {
 -------------------------------------------------------------------------------------------------
 
 -- Front VLS			32 missiles
+--GT.WS[15].LN[1]
 ws = GT_t.inc_ws();
 GT.WS[ws] = {}
 set_recursive_metatable(GT.WS[ws], GT_t.WS_t.ship_MK41_SM2 )
@@ -392,6 +399,7 @@ GT.WS[ws].LN[3].PL[1].virtualStwID = 1;
 GT.WS[ws].LN[3].BR = A_Burke_front_cells
 --16
 -- Rear VLS			64 missiles - inherit front VLS
+--GT.WS[16].LN[1]
 ws = GT_t.inc_ws();
 GT.WS[ws] = {}
 set_recursive_metatable(GT.WS[ws], GT.WS[ws-1])
