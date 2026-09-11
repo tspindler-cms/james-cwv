@@ -8,7 +8,6 @@ state		  = "installed",
 fileMenuName  = _("cwv_Iowa89"),
 developerName = "James J Jackson",
 info		  = _("USS Iowa, BB-61, circa 1989"),
-encyclopedia_path = current_mod_path .. '/Encyclopedia',
 
 Skins =
 {

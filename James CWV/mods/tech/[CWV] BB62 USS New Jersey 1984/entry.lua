@@ -8,7 +8,6 @@ state		  = "installed",
 fileMenuName  = _("cwv_New_Jersey"),
 developerName = "James J Jackson",
 info		  = _("USS New Jersey, BB-62, circa 1984"),
-encyclopedia_path = current_mod_path .. '/Encyclopedia',
 
 Skins =
 {

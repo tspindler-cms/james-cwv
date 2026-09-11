@@ -8,7 +8,6 @@ declare_plugin("JJJ_enterprise_90",
 	fileMenuName = _("CWV Enterprise 90"),
 	developerName =   "TeTeT, James J. Jackson, Riko, Woogey",
 	info		  =    _("USS Enterprise, CVN-65, circa 1990, Wikipedia:  In 1958, she became the first nuclear-powered aircraft carrier in the United States Navy, and the world, as well as the eighth United States naval vessel to bear the name."),
-	encyclopedia_path = current_mod_path .. '/Encyclopedia',
 
 	Skins =
 	{
