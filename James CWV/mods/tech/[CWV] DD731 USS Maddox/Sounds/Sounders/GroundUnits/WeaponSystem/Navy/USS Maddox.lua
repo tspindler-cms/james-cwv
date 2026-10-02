@@ -43,9 +43,11 @@ USS_Maddox_weapons:addLauncher(9, 1, automatic_gun_25mm)
 
 USS_Maddox_weapons:addTurret(10)
 USS_Maddox_weapons:addLauncher(10, 1, ship_MK75)
+USS_Maddox_weapons:addLauncher(10, 2, ship_MK75)
 
 USS_Maddox_weapons:addTurret(11)
 USS_Maddox_weapons:addLauncher(11, 1, ship_MK75)
+USS_Maddox_weapons:addLauncher(11, 2, ship_MK75)
 
 USS_Maddox_weapons:addTurret(12)
 USS_Maddox_weapons:addLauncher(12, 1, ship_MK75)
@@ -55,10 +57,5 @@ USS_Maddox_weapons:addTurret(13)
 USS_Maddox_weapons:addLauncher(13, 1, ship_MK75)
 USS_Maddox_weapons:addLauncher(13, 2, ship_MK75)
 
-USS_Maddox_weapons:addTurret(14)
-USS_Maddox_weapons:addLauncher(14, 1, ship_MK75)
-USS_Maddox_weapons:addLauncher(14, 2, ship_MK75)
 
-USS_Maddox_weapons:addTurret(15)
-USS_Maddox_weapons:addLauncher(15, 1, ship_MK75)
-USS_Maddox_weapons:addLauncher(15, 2, ship_MK75)
+

@@ -178,7 +178,7 @@ __LN.BR = {{ connector_name = 'POINT_GUN_127mm_1',
 ws = GT_t.inc_ws();
 GT.WS[ws] = {}
 set_recursive_metatable(GT.WS[ws], GT_t.WS_t.ship_HARPOON )
-GT.WS[ws].area = 'kx_t2'
+GT.WS[ws].area = 'kx_t3'
 GT.WS[ws].center = 'CENTER_TURRET_02'
 GT.WS[ws].drawArgument1 = 201
 GT.WS[ws].drawArgument2 = 202
@@ -189,7 +189,7 @@ GT.WS[ws].omegaY = math.rad(16);
 GT.WS[ws].omegaZ = math.rad(16);
 GT.WS[ws].reference_angle_Y = math.rad(0);
 GT.WS[ws].reference_angle_Z = math.rad(0);
-GT.WS[ws].LN[1].launch_delay = 12;
+GT.WS[ws].LN[1].shot_delay = 12;
 GT.WS[ws].LN[1].show_external_missile = true 
 GT.WS[ws].LN[1].max_number_of_missiles_channels = 2;
 GT.WS[ws].LN[1].PL[1].ammo_capacity = 2;
@@ -205,7 +205,7 @@ GT.WS[ws].LN[1].BR = {
 ws = GT_t.inc_ws();
 GT.WS[ws] = {}
 set_recursive_metatable(GT.WS[ws], GT_t.WS_t.Badger_RIM7_SeaSparrow )
-GT.WS[ws].area = 'kx_t3'
+GT.WS[ws].area = 'kx_t2'
 GT.WS[ws].center = 'CENTER_TURRET_03'
 GT.WS[ws].drawArgument1 = 219
 GT.WS[ws].drawArgument2 = 220
@@ -272,6 +272,7 @@ end
 -------------------------------------------------------------------------------------------------
 --   Torpedos
 -------------------------------------------------------------------------------------------------
+--[[
 ws = GT_t.inc_ws();
 GT.WS[ws] = {};
 set_recursive_metatable( GT.WS[ws], GT_t.WS_t.ship_mk46 );
@@ -283,10 +284,11 @@ GT.WS[ws].LN[1].BR = {
 	{connector_name = 'TPO_04', recoilArgument = 178, recoilT0 = -1, recoilT1 = -0.5, recoilT2 = 0.5, recoilTime = 1.0},
 };
 GT.WS[ws].LN[1].show_external_missile = false
+]]
 -------------------------------------------------------------------------
 
 GT.Name = "USS Badger"; -- folder name for Liveries
-GT.DisplayName = _("[CWV] USS Badger (FF-1071)"); -- name in game in ME and on the tape at the bottom
+GT.DisplayName = _("[CWV] FF-1071 USS Badger"); -- name in game in ME and on the tape at the bottom
 GT.DisplayNameShort = _("Knox class (RIM-7)"); -- Label name
 GT.Rate = 3000.000000;
 
@@ -295,6 +297,10 @@ GT.Sensors = {  OPTIC = {"long-range naval optics", "long-range naval LLTV", "lo
                     "Badger air",
                     "Badger surface",}
             };
+GT.sensor = {};
+set_recursive_metatable(GT.sensor, GT_t.SN_visual);
+GT.sensor.height = 24.2;
+GT.sensor.max_range_finding_target = 500;
 ----------------------------------------------------
 GT.DetectionRange  	= GT.airFindDist;
 GT.ThreatRange 		= GT.airWeaponDist;

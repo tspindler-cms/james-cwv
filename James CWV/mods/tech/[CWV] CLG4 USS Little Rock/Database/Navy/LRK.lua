@@ -143,7 +143,7 @@ GT.WS[ws].drawArgument2 = 1212;
 GT.WS[ws].reference_angle_Z = math.rad(0);
 GT.WS[ws].reference_angle_Y = math.rad(0);
 GT.WS[ws].angles = {
-	{math.rad(140), math.rad(-140), math.rad(-10), math.rad(85)},
+	{math.rad(120), math.rad(-120), math.rad(-10), math.rad(85)},
 };
 -- first set of launchers
 --GT.WS[2].LN[1]
@@ -164,7 +164,7 @@ GT.WS[ws].center = 'CENTER_TURRET_02'
 GT.WS[ws].omegaY = math.rad(30);
 GT.WS[ws].omegaZ = math.rad(20);
 GT.WS[ws].angles = {
-	{math.rad(140), math.rad(-140), math.rad(-10), math.rad(85)},
+	{math.rad(120), math.rad(-120), math.rad(-10), math.rad(85)},
 };
 GT.WS[ws].reference_angle_Z = math.rad(0);
 -- second set of launchers
@@ -196,6 +196,7 @@ GT.WS[ws] = {
             reactionTime = 2.0,
             reflection_limit = 2.2,
 			frequencyRange = {5.4e9,5.9e9},
+			--frequencyRange = {0.5e9, 0.58e9},
             ECM_K = 0.5,
             min_trg_alt = 5,
             max_trg_alt = 30480,
@@ -262,8 +263,8 @@ ws = GT_t.inc_ws();
 GT.WS[ws] = {}
 set_recursive_metatable(GT.WS[ws], GT_t.SS_t.VYMPEL_TRACKER[2]);
 GT.WS[ws].base = ws-1;
-local visual_tracker_ws1 = {{{"self", ws-1}}, {{"self", ws}}};
-
+--local visual_tracker_ws1 = {{{"self", ws-1}}, {{"self", ws}}};
+local LRK_tracker_ws1 = {{{"self", ws-1}}, {{"self", ws}}};
 
 
 	
@@ -286,7 +287,8 @@ ws = GT_t.inc_ws();
 GT.WS[ws] = {}
 set_recursive_metatable(GT.WS[ws], GT_t.SS_t.VYMPEL_TRACKER[2]);
 GT.WS[ws].base = ws-1;
-local visual_tracker_ws2 = {{{"self", ws-1}}, {{"self", ws}}};					
+--local visual_tracker_ws2 = {{{"self", ws-1}}, {{"self", ws}}};
+local LRK_tracker_ws2 = {{{"self", ws-1}}, {{"self", ws}}};					
 -------------------------------------------------------------------------
 
 GT.Name = "USS Little Rock" -- folder name for Liveries
@@ -298,7 +300,10 @@ GT.Sensors = {  OPTIC = {"long-range naval optics", "long-range naval LLTV", "lo
 				RADAR = {"LRK air",
                     "LRK surface",} --radar types
 			};
-
+GT.sensor = {};
+set_recursive_metatable(GT.sensor, GT_t.SN_visual);
+GT.sensor.height = 34.0;
+GT.sensor.max_range_finding_target = 500;
 ----------------------------------------------------
 GT.DetectionRange  	= GT.airFindDist;
 GT.ThreatRange 		= GT.airWeaponDist;

@@ -8,7 +8,6 @@ fileMenuName = _("JJJ A_Burke"),
 version		 = "0.0.6",		 
 state		 = "installed",
 info		 = _("USS Arleigh Burke (DDG-51)"),
-encyclopedia_path = current_mod_path .. '/Encyclopedia',
 -- https://en.wikipedia.org/wiki/USS_Arleigh_Burke_(DDG-51)
 Skins =
 	{

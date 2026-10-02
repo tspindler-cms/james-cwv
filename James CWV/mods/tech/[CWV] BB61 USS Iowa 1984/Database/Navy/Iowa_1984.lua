@@ -89,7 +89,7 @@ GT.DM = {
 	{ area_name = "ciws_4", area_arg = 918, area_life = 20},
 };
 
-GT.airWeaponDist = 14630.0;  -- Max engagement range air threats (meters)
+GT.airWeaponDist = 16642.0;  -- Max engagement range air threats (meters)
 GT.airFindDist = 130000; -- Max detenction range air threats (meters)
 
 
@@ -167,7 +167,7 @@ GT_t.WS_t.ship_mk12_2x127mm.reference_angle_Z = 0;
 GT_t.LN_t.ship_mk12_127mm_AIR = {};
 GT_t.LN_t.ship_mk12_127mm_AIR.type = 11;
 GT_t.LN_t.ship_mk12_127mm_AIR.distanceMin = 20;
-GT_t.LN_t.ship_mk12_127mm_AIR.distanceMax = 9144;
+GT_t.LN_t.ship_mk12_127mm_AIR.distanceMax = 16642;
 GT_t.LN_t.ship_mk12_127mm_AIR.max_trg_alt = 11339;
 GT_t.LN_t.ship_mk12_127mm_AIR.reactionTime = 2;
 GT_t.LN_t.ship_mk12_127mm_AIR.sensor = {};
@@ -826,6 +826,10 @@ GT.Rate = 61000.000000
 GT.Sensors = {  OPTIC = {"long-range naval optics", "long-range naval LLTV", "long-range naval FLIR", "long-range air defence optics"}, --optics types
 				RADAR = {"ticonderoga search radar"}, --radar types
 			};
+GT.sensor = {};
+set_recursive_metatable(GT.sensor, GT_t.SN_visual);
+GT.sensor.height = 45.0;
+GT.sensor.max_range_finding_target = 500;
 ----------------------------------------------------
 GT.DetectionRange  	= GT.airFindDist;
 GT.ThreatRange 		= GT.airWeaponDist;

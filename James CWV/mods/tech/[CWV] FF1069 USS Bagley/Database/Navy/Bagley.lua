@@ -150,27 +150,27 @@ GT_t.LN_t.ship_mk42_127mm.PL[1] = {
 --   Phalanx  Ammo   
 -------------------------------------------------------------------------------------------------
 
-GT_t.LN_t.Knox_Phalanx_CIWS = {name = "Knox Phalanx CIWS", display_name = _("Knox Phalanx CIWS")}; 
-GT_t.LN_t.Knox_Phalanx_CIWS.type = 3;
-GT_t.LN_t.Knox_Phalanx_CIWS.distanceMin = 0
-GT_t.LN_t.Knox_Phalanx_CIWS.distanceMax = 3000
-GT_t.LN_t.Knox_Phalanx_CIWS.max_trg_alt = 3000
-GT_t.LN_t.Knox_Phalanx_CIWS.reactionTime = 1.0
-GT_t.LN_t.Knox_Phalanx_CIWS.reflection_limit = 0.02;
-GT_t.LN_t.Knox_Phalanx_CIWS.beamWidth = math.rad(90);
-GT_t.LN_t.Knox_Phalanx_CIWS.sensor = {}
-set_recursive_metatable(GT_t.LN_t.Knox_Phalanx_CIWS.sensor, GT_t.WSN_t[5]) 
-GT_t.LN_t.Knox_Phalanx_CIWS.PL = {}
-GT_t.LN_t.Knox_Phalanx_CIWS.PL[1] = {}
-GT_t.LN_t.Knox_Phalanx_CIWS.PL[1].ammo_capacity = 155
-GT_t.LN_t.Knox_Phalanx_CIWS.PL[1].switch_on_delay = 1.0;
-GT_t.LN_t.Knox_Phalanx_CIWS.PL[1].shell_name = {"bag_Phalanx_CIWS_MK244_APDS"};
-GT_t.LN_t.Knox_Phalanx_CIWS.PL[1].shot_delay = 60/4500; 
-GT_t.LN_t.Knox_Phalanx_CIWS.PL[1].reload_time = 1.0;
-GT_t.LN_t.Knox_Phalanx_CIWS.BR = { {pos = {2, 0, 0} } }
+GT_t.LN_t.Bgly_Phalanx_CIWS = {name = "Bagley Phalanx CIWS", display_name = _("Bagley Phalanx CIWS")}; 
+GT_t.LN_t.Bgly_Phalanx_CIWS.type = 3;
+GT_t.LN_t.Bgly_Phalanx_CIWS.distanceMin = 0
+GT_t.LN_t.Bgly_Phalanx_CIWS.distanceMax = 3000
+GT_t.LN_t.Bgly_Phalanx_CIWS.max_trg_alt = 3000
+GT_t.LN_t.Bgly_Phalanx_CIWS.reactionTime = 1.0
+GT_t.LN_t.Bgly_Phalanx_CIWS.reflection_limit = 0.02;
+GT_t.LN_t.Bgly_Phalanx_CIWS.beamWidth = math.rad(90);
+GT_t.LN_t.Bgly_Phalanx_CIWS.sensor = {}
+set_recursive_metatable(GT_t.LN_t.Bgly_Phalanx_CIWS.sensor, GT_t.WSN_t[5]) 
+GT_t.LN_t.Bgly_Phalanx_CIWS.PL = {}
+GT_t.LN_t.Bgly_Phalanx_CIWS.PL[1] = {}
+GT_t.LN_t.Bgly_Phalanx_CIWS.PL[1].ammo_capacity = 155
+GT_t.LN_t.Bgly_Phalanx_CIWS.PL[1].switch_on_delay = 1.0;
+GT_t.LN_t.Bgly_Phalanx_CIWS.PL[1].shell_name = {"bag_Phalanx_CIWS_MK244_APDS"};
+GT_t.LN_t.Bgly_Phalanx_CIWS.PL[1].shot_delay = 60/4500; 
+GT_t.LN_t.Bgly_Phalanx_CIWS.PL[1].reload_time = 1.0;
+GT_t.LN_t.Bgly_Phalanx_CIWS.BR = { {pos = {2, 0, 0} } }
 for i=2,10 do
-    GT_t.LN_t.Knox_Phalanx_CIWS.PL[i] = {};
-    set_recursive_metatable(GT_t.LN_t.Knox_Phalanx_CIWS.PL[i], GT_t.LN_t.Knox_Phalanx_CIWS.PL[1]);
+    GT_t.LN_t.Bgly_Phalanx_CIWS.PL[i] = {};
+    set_recursive_metatable(GT_t.LN_t.Bgly_Phalanx_CIWS.PL[i], GT_t.LN_t.Bgly_Phalanx_CIWS.PL[1]);
 end;
 
 -------------------------------------------------------------------------
@@ -204,7 +204,7 @@ __LN.BR = {{ connector_name = 'POINT_GUN_127mm_1',
 
 ws = GT_t.inc_ws();
 GT.WS[ws] = {}
-GT.WS[ws].area = 'kx_t3'
+GT.WS[ws].area = 'kx_t2'
 GT.WS[ws].center = 'CENTER_TURRET_03'
 GT.WS[ws].drawArgument1 = 103
 GT.WS[ws].drawArgument2 = 104
@@ -218,7 +218,7 @@ GT.WS[ws].pidZ = {p=300, i = 0.05, d = 10.0, inn = 1000};
 GT.WS[ws].stabilizer = true;
 GT.WS[ws].reference_angle_Y = math.rad(-180);
 
-__LN = add_launcher(GT.WS[ws], GT_t.LN_t.Knox_Phalanx_CIWS);
+__LN = add_launcher(GT.WS[ws], GT_t.LN_t.Bgly_Phalanx_CIWS);
 __LN.BR = {{ connector_name = 'POINT_GUN_CIWS', 
 							fireAnimationArgument = 105,
 							recoilArgument = 105,
@@ -231,7 +231,7 @@ __LN.BR = {{ connector_name = 'POINT_GUN_CIWS',
 ws = GT_t.inc_ws();
 GT.WS[ws] = {}
 set_recursive_metatable(GT.WS[ws], GT_t.WS_t.ship_HARPOON )
-GT.WS[ws].area = 'kx_t2'
+GT.WS[ws].area = 'kx_t3'
 GT.WS[ws].center = 'CENTER_TURRET_02'
 GT.WS[ws].drawArgument1 = 201
 GT.WS[ws].drawArgument2 = 202
@@ -242,7 +242,7 @@ GT.WS[ws].omegaY = math.rad(16);
 GT.WS[ws].omegaZ = math.rad(16);
 GT.WS[ws].reference_angle_Y = math.rad(0);
 GT.WS[ws].reference_angle_Z = math.rad(0);
-GT.WS[ws].LN[1].launch_delay = 12;
+GT.WS[ws].LN[1].shot_delay = 12;
 GT.WS[ws].LN[1].show_external_missile = true 
 GT.WS[ws].LN[1].max_number_of_missiles_channels = 2;
 GT.WS[ws].LN[1].PL[1].ammo_capacity = 2;
@@ -254,6 +254,7 @@ GT.WS[ws].LN[1].BR = {
 -------------------------------------------------------------------------------------------------
 --   Torpedos
 -------------------------------------------------------------------------------------------------
+--[[
 ws = GT_t.inc_ws();
 GT.WS[ws] = {};
 set_recursive_metatable( GT.WS[ws], GT_t.WS_t.ship_mk46 );
@@ -265,16 +266,21 @@ GT.WS[ws].LN[1].BR = {
 	{connector_name = 'TPO_04', recoilArgument = 178, recoilT0 = -1, recoilT1 = -0.5, recoilT2 = 0.5, recoilTime = 1.0},
 };
 GT.WS[ws].LN[1].show_external_missile = false
+]]
 -------------------------------------------------------------------------
 
 GT.Name = "USS Bagley"; -- folder name for Liveries
-GT.DisplayName = _("[CWV] USS Bagley (FF-1069)"); -- name in game in ME and on the tape at the bottom
+GT.DisplayName = _("[CWV] FF-1069 USS Bagley"); -- name in game in ME and on the tape at the bottom
 GT.DisplayNameShort = _("Knox class (CIWS)"); -- Label name
 GT.Rate = 3000.000000;
 
 GT.Sensors = {  OPTIC = {"long-range naval optics", "long-range naval LLTV", "long-range naval FLIR", "long-range air defence optics"}, --optics types
                 RADAR = {"ticonderoga search radar"}, --radar types
 };
+GT.sensor = {};
+set_recursive_metatable(GT.sensor, GT_t.SN_visual);
+GT.sensor.height = 24.2;
+GT.sensor.max_range_finding_target = 500;
 ----------------------------------------------------
 GT.DetectionRange  	= GT.airFindDist;
 GT.ThreatRange 		= GT.airWeaponDist;

@@ -65,7 +65,7 @@ GT.DM = {
 }
 
 
-GT.airWeaponDist = 18650.0  -- Max engagement range air threats (meters)
+GT.airWeaponDist = 16642.0  -- Max engagement range air threats (meters)
 GT.airFindDist = 45000 -- Max detenction range air threats (meters)
 
 --Radar info
@@ -202,7 +202,9 @@ GT_t.LN_t.ship_maddox_oerlikon_20mm_AIR.PL[1] = {
 
 
 
---------------------------------------------------------------
+-------------------------------------------------------------------------------------------------
+--   5inch turret 1
+-------------------------------------------------------------------------------------------------
 
 ws = GT_t.inc_ws();
 GT.WS[ws] = {}
@@ -220,12 +222,11 @@ GT.WS[ws].angles = {
 __LN = add_launcher(GT.WS[ws], GT_t.LN_t.ship_mk12_127mm_AIR);
 __LN.sightMaxTanVel = 300;
 __LN.BR = {{ connector_name = 'POINT_GUN_127mm_1_1',
-							recoilArgument = 33,
-							recoilTime = 0.2 }};
-__LN = add_launcher(GT.WS[ws], GT_t.LN_t.ship_mk12_127mm);
-__LN.BR = {{ connector_name = 'POINT_GUN_127mm_1_2',
-							recoilArgument = 33,
-							recoilTime = 0.2 }};
+			recoilArgument = 1111,
+			recoilTime = 0.5 },
+		   { connector_name = 'POINT_GUN_127mm_1_2',
+			recoilArgument = 1112,
+			recoilTime = 0.5 }};
 
 ws = GT_t.inc_ws();
 GT.WS[ws] = {}
@@ -238,16 +239,19 @@ GT.WS[ws].angles = {
 					};
 GT.WS[ws].reference_angle_Z = math.rad(0);
 -- second set of launchers
-__LN = add_launcher(GT.WS[ws], GT_t.LN_t.ship_mk12_127mm_AIR);
+__LN = add_launcher(GT.WS[ws], GT_t.LN_t.ship_mk12_127mm);
 __LN.sightMaxTanVel = 300
 __LN.BR = {{ connector_name = 'POINT_GUN_127mm_1_2',
-							recoilArgument = 33,
-							recoilTime = 0.2 }}
-__LN = add_launcher(GT.WS[ws], GT_t.LN_t.ship_mk12_127mm);
-__LN.BR = {{ connector_name = 'POINT_GUN_127mm_1_1',
-							recoilArgument = 33,
-							recoilTime = 0.2 }}
+			recoilArgument = 1111,
+			recoilTime = 0.5 },
+		   { connector_name = 'POINT_GUN_127mm_1_1',
+			recoilArgument = 1112,
+			recoilTime = 0.5 }};
 
+
+-------------------------------------------------------------------------------------------------
+--   5inch turret 2
+-------------------------------------------------------------------------------------------------
 ws = GT_t.inc_ws();
 GT.WS[ws] = {}
 set_recursive_metatable(GT.WS[ws], GT_t.WS_t.ship_mk12_2x127mm)
@@ -266,12 +270,11 @@ GT.WS[ws].angles = {
 __LN = add_launcher(GT.WS[ws], GT_t.LN_t.ship_mk12_127mm_AIR);
 __LN.sightMaxTanVel = 300
 __LN.BR = {{ connector_name = 'POINT_GUN_127mm_2_1',
-							recoilArgument = 33,
-							recoilTime = 0.2 }}
-__LN = add_launcher(GT.WS[ws], GT_t.LN_t.ship_mk12_127mm);
-__LN.BR = {{ connector_name = 'POINT_GUN_127mm_2_2',
-							recoilArgument = 33,
-							recoilTime = 0.2 }}
+			recoilArgument = 1121,
+			recoilTime = 0.5 },
+		   { connector_name = 'POINT_GUN_127mm_2_2',
+			recoilArgument = 1122,
+			recoilTime = 0.5 }};
 
 ws = GT_t.inc_ws();
 GT.WS[ws] = {}
@@ -284,16 +287,18 @@ GT.WS[ws].angles = {
 					};
 GT.WS[ws].reference_angle_Z = math.rad(0);
 -- second set of launchers
-__LN = add_launcher(GT.WS[ws], GT_t.LN_t.ship_mk12_127mm_AIR);
+__LN = add_launcher(GT.WS[ws], GT_t.LN_t.ship_mk12_127mm);
 __LN.sightMaxTanVel = 300
 __LN.BR = {{ connector_name = 'POINT_GUN_127mm_2_2',
-							recoilArgument = 33,
-							recoilTime = 0.2 }}
-__LN = add_launcher(GT.WS[ws], GT_t.LN_t.ship_mk12_127mm);
-__LN.BR = {{ connector_name = 'POINT_GUN_127mm_2_1',
-							recoilArgument = 33,
-							recoilTime = 0.2 }}
+			recoilArgument = 1122,
+			recoilTime = 0.5 },
+		   { connector_name = 'POINT_GUN_127mm_2_1',
+			recoilArgument = 1121,
+			recoilTime = 0.5 }};
 
+-------------------------------------------------------------------------------------------------
+--   5inch turret 3
+-------------------------------------------------------------------------------------------------
 ws = GT_t.inc_ws();
 GT.WS[ws] = {}
 set_recursive_metatable(GT.WS[ws], GT_t.WS_t.ship_mk12_2x127mm)
@@ -312,12 +317,11 @@ GT.WS[ws].angles = {
 __LN = add_launcher(GT.WS[ws], GT_t.LN_t.ship_mk12_127mm_AIR);
 __LN.sightMaxTanVel = 300
 __LN.BR = {{ connector_name = 'POINT_GUN_127mm_3_1',
-							recoilArgument = 33,
-							recoilTime = 0.2 }}
-__LN = add_launcher(GT.WS[ws], GT_t.LN_t.ship_mk12_127mm);
-__LN.BR = {{ connector_name = 'POINT_GUN_127mm_3_2',
-							recoilArgument = 33,
-							recoilTime = 0.2 }}
+			recoilArgument = 1131,
+			recoilTime = 0.5 },
+		   { connector_name = 'POINT_GUN_127mm_3_2',
+			recoilArgument = 1132,
+			recoilTime = 0.5 }};
 
 ws = GT_t.inc_ws();
 GT.WS[ws] = {}
@@ -330,16 +334,18 @@ GT.WS[ws].angles = {
 					};
 GT.WS[ws].reference_angle_Z = math.rad(0);
 -- second set of launchers
-__LN = add_launcher(GT.WS[ws], GT_t.LN_t.ship_mk12_127mm_AIR);
+__LN = add_launcher(GT.WS[ws], GT_t.LN_t.ship_mk12_127mm);
 __LN.sightMaxTanVel = 300;
 __LN.BR = {{ connector_name = 'POINT_GUN_127mm_3_2',
-							recoilArgument = 33,
-							recoilTime = 0.2 }};
-__LN = add_launcher(GT.WS[ws], GT_t.LN_t.ship_mk12_127mm);
-__LN.BR = {{ connector_name = 'POINT_GUN_127mm_3_1',
-							recoilArgument = 33,
-							recoilTime = 0.2 }};
+			recoilArgument = 1132,
+			recoilTime = 0.5 },
+		   { connector_name = 'POINT_GUN_127mm_3_1',
+			recoilArgument = 1131,
+			recoilTime = 0.5 }};
 
+-------------------------------------------------------------------------------------------------
+--   20mm turret 1
+-------------------------------------------------------------------------------------------------
 ws = GT_t.inc_ws();
 GT.WS[ws] = {}
 set_recursive_metatable(GT.WS[ws], GT_t.WS_t.ship_maddox_oerlikon_20mm)
@@ -359,6 +365,9 @@ __LN.BR = {{ connector_name = 'POINT_20mm_1',
 							recoilArgument = 33,
 							recoilTime = 0.2 }};
 
+-------------------------------------------------------------------------------------------------
+--   20mm turret 2
+-------------------------------------------------------------------------------------------------
 ws = GT_t.inc_ws();
 GT.WS[ws] = {}
 set_recursive_metatable(GT.WS[ws], GT_t.WS_t.ship_maddox_oerlikon_20mm)
@@ -378,6 +387,9 @@ __LN.BR = {{ connector_name = 'POINT_20mm_2',
 							recoilArgument = 33,
 							recoilTime = 0.2 }};
 
+-------------------------------------------------------------------------------------------------
+--   20mm turret 3
+-------------------------------------------------------------------------------------------------
 ws = GT_t.inc_ws();
 GT.WS[ws] = {}
 set_recursive_metatable(GT.WS[ws], GT_t.WS_t.ship_maddox_oerlikon_20mm)
@@ -397,6 +409,9 @@ __LN.BR = {{ connector_name = 'POINT_20mm_3',
 							recoilArgument = 33,
 							recoilTime = 0.2 }};
 
+-------------------------------------------------------------------------------------------------
+--   76mm turret 1
+-------------------------------------------------------------------------------------------------
 ws = GT_t.inc_ws();
 GT.WS[ws] = {};
 set_recursive_metatable(GT.WS[ws], GT_t.WS_t.ship_mk33_76mm);
@@ -404,16 +419,21 @@ GT.WS[ws].area = 'HullRear';
 GT.WS[ws].center = 'CENTER_TURRET_07';
 GT.WS[ws].drawArgument1 = 15;
 GT.WS[ws].drawArgument2 = 16;
+GT.WS[ws].omegaY = math.rad(30);
+GT.WS[ws].omegaZ = math.rad(20);
 GT.WS[ws].reference_angle_Y = math.rad(90)
 GT.WS[ws].angles = {
-					{math.rad(135), math.rad(10), math.rad(-5), math.rad(85)},
+					{math.rad(175), math.rad(20), math.rad(-5), math.rad(85)},
 					};	
 __LN = add_launcher(GT.WS[ws], GT_t.LN_t.ship_mk33_76mm_AIR);
 __LN.sightMaxTanVel = 300;
 __LN.BR = {{ connector_name = 'POINT_GUN_762mm_1',
-							recoilArgument = 33,
-							recoilTime = 0.2 }};
+							recoilArgument = 1311,
+							recoilTime = 0.5 }};
 
+-------------------------------------------------------------------------------------------------
+--   76mm turret 2
+-------------------------------------------------------------------------------------------------
 ws = GT_t.inc_ws();
 GT.WS[ws] = {};
 set_recursive_metatable(GT.WS[ws], GT_t.WS_t.ship_mk33_76mm);
@@ -421,6 +441,8 @@ GT.WS[ws].area = 'HullRear';
 GT.WS[ws].center = 'CENTER_TURRET_08';
 GT.WS[ws].drawArgument1 = 17;
 GT.WS[ws].drawArgument2 = 18;
+GT.WS[ws].omegaY = math.rad(30);
+GT.WS[ws].omegaZ = math.rad(20);
 GT.WS[ws].reference_angle_Y = math.rad(-90);
 GT.WS[ws].angles = {
 					{math.rad(-20), math.rad(-175), math.rad(-5), math.rad(85)},
@@ -428,9 +450,12 @@ GT.WS[ws].angles = {
 __LN = add_launcher(GT.WS[ws], GT_t.LN_t.ship_mk33_76mm_AIR);
 __LN.sightMaxTanVel = 300;
 __LN.BR = {{ connector_name = 'POINT_GUN_762mm_2',
-							recoilArgument = 33,
-							recoilTime = 0.2 }};
+							recoilArgument = 1321,
+							recoilTime = 0.5 }};
 
+-------------------------------------------------------------------------------------------------
+--   76mm turret 3
+-------------------------------------------------------------------------------------------------
 ws = GT_t.inc_ws();
 GT.WS[ws] = {};
 set_recursive_metatable(GT.WS[ws], GT_t.WS_t.ship_mk33_76mm);
@@ -438,19 +463,24 @@ GT.WS[ws].area = 'HullRear';
 GT.WS[ws].center = 'CENTER_TURRET_09';
 GT.WS[ws].drawArgument1 = 19;
 GT.WS[ws].drawArgument2 = 20;
+GT.WS[ws].omegaY = math.rad(30);
+GT.WS[ws].omegaZ = math.rad(20);
 GT.WS[ws].reference_angle_Y = math.rad(180)
 GT.WS[ws].angles = {
-	{math.rad(-45), math.rad(45), math.rad(-10), math.rad(85)},
+	{math.rad(-180), math.rad(10), math.rad(-10), math.rad(85)},
 };
 __LN = add_launcher(GT.WS[ws], GT_t.LN_t.ship_mk33_76mm_AIR);
 __LN.sightMaxTanVel = 300;
 __LN.BR = {{ connector_name = 'POINT_GUN_762mm_3_1',
-			recoilArgument = 33,
-			recoilTime = 0.2 },
+			recoilArgument = 1331,
+			recoilTime = 0.5 },
 		   { connector_name = 'POINT_GUN_762mm_3_2',
-			recoilArgument = 33,
-			recoilTime = 0.2 }};
-							
+			recoilArgument = 1332,
+			recoilTime = 0.5 }};
+
+-------------------------------------------------------------------------------------------------
+--   76mm turret 4
+-------------------------------------------------------------------------------------------------							
 ws = GT_t.inc_ws();
 GT.WS[ws] = {};
 set_recursive_metatable(GT.WS[ws], GT_t.WS_t.ship_mk33_76mm);
@@ -458,6 +488,8 @@ GT.WS[ws].area = 'HullRear';
 GT.WS[ws].center = 'CENTER_TURRET_10';
 GT.WS[ws].drawArgument1 = 21;
 GT.WS[ws].drawArgument2 = 22;
+GT.WS[ws].omegaY = math.rad(30);
+GT.WS[ws].omegaZ = math.rad(20);
 GT.WS[ws].reference_angle_Y = math.rad(180);
 GT.WS[ws].angles = {
 	{math.rad(-45), math.rad(45), math.rad(-10), math.rad(85)},
@@ -465,12 +497,12 @@ GT.WS[ws].angles = {
 __LN = add_launcher(GT.WS[ws], GT_t.LN_t.ship_mk33_76mm_AIR);
 __LN.sightMaxTanVel = 300;
 __LN.BR = {{ connector_name = 'POINT_GUN_762mm_4_1',
-			recoilArgument = 33,
-			recoilTime = 0.2 },
+			recoilArgument = 1341,
+			recoilTime = 0.5 },
 		   { connector_name = 'POINT_GUN_762mm_4_2',
-			recoilArgument = 33,
-			recoilTime = 0.2 }};
-
+			recoilArgument = 1342,
+			recoilTime = 0.5 }};
+--[[
 ws = GT_t.inc_ws();
 GT.WS[ws] = {};
 set_recursive_metatable( GT.WS[ws], GT_t.WS_t.ship_Torpedo84 );
@@ -482,7 +514,7 @@ GT.WS[ws].LN[1].BR = {
 	{connector_name = 'TPO_04', recoilArgument = 178, recoilT0 = -1, recoilT1 = -0.5, recoilT2 = 0.5, recoilTime = 1.0},
 };
 GT.WS[ws].LN[1].show_external_missile = false
-
+]]
 
 -------------------------------------------------------------------------
 
@@ -496,7 +528,7 @@ GT.Sensors = {  OPTIC = {"long-range naval optics", "long-range naval LLTV", "lo
 			};
 GT.sensor = {};
 set_recursive_metatable(GT.sensor, GT_t.SN_visual);
-GT.sensor.height = 15;
+GT.sensor.height = 15.2;
 GT.sensor.max_range_finding_target = 500;
 ----------------------------------------------------
 GT.DetectionRange  	= GT.airFindDist;

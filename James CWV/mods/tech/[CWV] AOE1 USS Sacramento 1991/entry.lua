@@ -8,12 +8,11 @@ state		  = "installed",
 fileMenuName  = _("JJJ_Sacramento_91"),
 developerName = "James J. Jackson",
 info		  = _("USS Sacramento, AOE-1, circa 1991"),
-encyclopedia_path = current_mod_path .. '/Encyclopedia',
 
 Skins =
 {
 	 {
-	     name  = "Sacramento 91",
+	     name  = "AOE-1 1991",
 		 dir   = "Skins/1"
 	 },
 },
