@@ -825,7 +825,8 @@ GT.DisplayNameShort = _("Big J") -- Label name
 GT.Rate = 61000.000000 
 
 GT.Sensors = {  OPTIC = {"long-range naval optics", "long-range naval LLTV", "long-range naval FLIR", "long-range air defence optics"}, --optics types
-				RADAR = {"ticonderoga search radar"}, --radar types
+				RADAR = {"NJ89 air",
+                    "NJ89 surface",} --radar types
 			};
 GT.sensor = {};
 set_recursive_metatable(GT.sensor, GT_t.SN_visual);
@@ -856,5 +857,4 @@ GT.tags  =
 {
 	"Battleship",
 };
-GT.Countries = {"USA"}
-add_surface_unit(GT)
+GT.Countries = { "USA" };

@@ -25,9 +25,9 @@ local OPTIC_SENSOR_LLTV = 1
 local OPTIC_SENSOR_IR = 2
 
 
-CVN6585_AN_SPS_48_SS =
+CVN6585_AN_SPS_10_SS =
         {
-			Name = "CVN6585_AN/SPS48 surface",
+			Name = "CVN6585_AN/SPS10 surface",
 			category = SENSOR_RADAR,
             type = RADAR_SS,
             vehicles_detection = true;
@@ -35,20 +35,20 @@ CVN6585_AN_SPS_48_SS =
             scan_volume =
             {
                 azimuth = {-180.0, 180.0},
-                elevation = {-15.0, 70.0}
+                elevation = {-3.0, 10.0}
             },
-            max_measuring_distance = 370000.0,
+            max_measuring_distance = 80000.0,
             detection_distance =
             {
                 [HEMISPHERE_UPPER] =
                 {
-                    [ASPECT_HEAD_ON] = 370000.0,
-                    [ASPECT_TAIL_ON] = 370000.0
+                    [ASPECT_HEAD_ON] = 80000.0,
+                    [ASPECT_TAIL_ON] = 80000.0
                 },
                 [HEMISPHERE_LOWER] =
                 {
-                    [ASPECT_HEAD_ON] = 370000.0,
-                    [ASPECT_TAIL_ON] = 370000.0
+                    [ASPECT_HEAD_ON] = 80000.0,
+                    [ASPECT_TAIL_ON] = 80000.0
                 }
             },
             lock_on_distance_coeff = 1.0,
@@ -56,12 +56,12 @@ CVN6585_AN_SPS_48_SS =
             {
                 radial_velocity_min = 10.0,
             },
-            scan_period = 10.0,
-            RCS = 10.0,
-            RBM_detection_distance = 370000.0			
+            scan_period = 12.0,
+            RCS = 100.0,
+            RBM_detection_distance = 80000.0			
         }
 
-declare_sensor(CVN6585_AN_SPS_48_SS)
+declare_sensor(CVN6585_AN_SPS_10_SS)
 
 
 CVN6585_AN_SPS_48_AS =

@@ -34,7 +34,7 @@ LRK_SS =
             scan_volume =
             {
                 azimuth = {-180.0, 180.0},
-                elevation = {-15.0, 70.0}
+                elevation = {-3.0, 10.0}
             },
             max_measuring_distance = 80000.0,
             detection_distance =
@@ -55,9 +55,9 @@ LRK_SS =
             {
                 radial_velocity_min = 10.0,
             },
-            scan_period = 10.0,
-            RCS = 10.0,
-            RBM_detection_distance = 370000.0			
+            scan_period = 12.0,
+            RCS = 100.0,
+            RBM_detection_distance = 80000.0			
         }
 
 declare_sensor(LRK_SS)

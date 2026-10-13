@@ -304,7 +304,7 @@ GT.Rate = 5500.000000
 
 GT.Sensors = {  OPTIC = {"long-range naval optics", "long-range naval LLTV", "long-range naval FLIR"}, --optics types
                 RADAR = {
-                    "CVN6585_AN/SPS48 surface",
+                    "CVN6585_AN/SPS10 surface",
                     "CVN6585_AN/SPS48 air",}
             }; --radar types
 GT.sensor = {};
@@ -342,4 +342,3 @@ GT.tags  =
 	"Carrier"
 };
 GT.Countries = { "USA" };
-add_surface_unit(GT)
