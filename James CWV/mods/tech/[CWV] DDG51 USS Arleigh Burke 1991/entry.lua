@@ -5,10 +5,9 @@ installed 	 = true,
 dirName	  	 = current_mod_path,
 
 fileMenuName = _("JJJ A_Burke"),
-version		 = "0.0.6",		 
+version		 = "0.0.7",		 
 state		 = "installed",
 info		 = _("USS Arleigh Burke (DDG-51)"),
--- https://en.wikipedia.org/wiki/USS_Arleigh_Burke_(DDG-51)
 Skins =
 	{
 		{
@@ -29,9 +28,9 @@ mount_vfs_texture_path  (current_mod_path.."/Textures/A_Burke.zip")
 dofile(current_mod_path.."/Database/Sensors/A_Burke_sensors.lua")
 
 -- weapons
-dofile(current_mod_path..'/Database/Weapons/A_Burke_weapons.lua')
+dofile(current_mod_path.."/Database/Weapons/A_Burke_weapons.lua")
 
 --Ship
-dofile(current_mod_path..'/Database/Navy/A_Burke.lua')
+dofile(current_mod_path .."/Database/db_ships.lua")
 plugin_done()
 

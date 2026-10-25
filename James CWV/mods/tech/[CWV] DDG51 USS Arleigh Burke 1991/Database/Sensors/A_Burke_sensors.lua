@@ -25,9 +25,9 @@ local OPTIC_SENSOR_LLTV = 1
 local OPTIC_SENSOR_IR = 2
 
 
-JJ_SPY_1_SS =
+ABurke_SS =
         {
-			Name = "JJ/SPY-1 surface",
+			Name = "ABurke surface",
 			category = SENSOR_RADAR,
             type = RADAR_SS,
             vehicles_detection = true;
@@ -61,12 +61,12 @@ JJ_SPY_1_SS =
             RBM_detection_distance = 100000.0			
         }
 
-declare_sensor(JJ_SPY_1_SS)
+declare_sensor(ABurke_SS)
 
 
-JJ_SPY_1_AS =
+ABurke_AS =
         {
-            Name = "JJ/SPY-1 air",
+            Name = "ABurke air",
             category = SENSOR_RADAR,
             type = RADAR_AS,
             scan_volume =
@@ -96,4 +96,4 @@ JJ_SPY_1_AS =
             scan_period = 1.0,
         }
 
-declare_sensor(JJ_SPY_1_AS)
+declare_sensor(ABurke_AS)

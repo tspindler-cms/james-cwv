@@ -234,7 +234,7 @@ GT.WS[ws].LN[1].BR = {
 -- AIGES trackers
 --GT.WS[5-14]
 ws = GT_t.inc_ws();
-local first_JJSPY1_tracker_id = ws;
+local first_ABurke_tracker_id = ws;
 GT.WS[ws] = {
 	omegaY = 2,
 	omegaZ = 2,
@@ -259,13 +259,13 @@ GT.WS[ws] = {
 		}
 	}
 };
-local JJSPY1_tracker_ws = {{{'self', ws}}}
+local ABurke_tracker_ws = {{{'self', ws}}}
 
 for i=2,10 do
 	ws = GT_t.inc_ws();
 	GT.WS[ws] = {};
-	set_recursive_metatable(GT.WS[ws], GT.WS[first_JJSPY1_tracker_id]);
-	table.insert(JJSPY1_tracker_ws, {{'self', ws}})
+	set_recursive_metatable(GT.WS[ws], GT.WS[first_ABurke_tracker_id]);
+	table.insert(ABurke_tracker_ws, {{'self', ws}})
 end;
 
 -----------------------------------------------------------------------------------------------------------------------------
@@ -378,7 +378,7 @@ set_recursive_metatable(GT.WS[ws], GT_t.WS_t.ship_MK41_SM2 )
 GT.WS[ws].sharesBarrelsBetweenLaunchers = true
 GT.WS[ws].area = 'VLS1'
 GT.WS[ws].center = 'VF24'
-GT.WS[ws].LN[1].depends_on_unit = JJSPY1_tracker_ws
+GT.WS[ws].LN[1].depends_on_unit = ABurke_tracker_ws
 GT.WS[ws].LN[1].PL[1].ammo_capacity = 25
 GT.WS[ws].LN[1].PL[1].virtualStwID = 1;	
 GT.WS[ws].LN[1].BR = A_Burke_front_cells
@@ -386,7 +386,7 @@ GT.WS[ws].LN[1].BR = A_Burke_front_cells
 GT.WS[ws].LN[2] = {}
 set_recursive_metatable(GT.WS[ws].LN[2], GT.WS[ws].LN[1])
 GT.WS[ws].LN[2].distanceMax = 180000
-GT.WS[ws].LN[2].depends_on_unit = JJSPY1_tracker_ws
+GT.WS[ws].LN[2].depends_on_unit = ABurke_tracker_ws
 GT.WS[ws].LN[2].PL[1].ammo_capacity = 0 -- SM-2ER
 GT.WS[ws].LN[2].PL[1].type_ammunition = "weapons.missiles.SM_2ER"
 GT.WS[ws].LN[2].PL[1].name_ammunition = _("SM 2ER RIM 156")
@@ -489,36 +489,31 @@ GT.Rate = 3000
 
 GT.Sensors = {  OPTIC = {"long-range naval optics", "long-range naval LLTV", "long-range naval FLIR",},
                 RADAR = {
-                    "JJ/SPY-1 surface",
-                    "JJ/SPY-1 air",}
+                    "ABurke surface",
+                    "ABurke air",}
             };
 GT.sensor = {};
-set_recursive_metatable(GT.sensor, GT_t.SN_visual);
+--set_recursive_metatable(GT.sensor, GT_t.SN_visual);
 GT.sensor.height = 15.3;
 GT.sensor.max_range_finding_target = 500;
 GT.DetectionRange  = GT.airFindDist;
 GT.ThreatRange = GT.airWeaponDist;
-GT.Singleton   ="no";
+GT.Singleton   ="yes";
 GT.mapclasskey = "P0091000068"; --Destroyer
-GT.attribute = {wsType_Navy,wsType_Ship,wsType_ArmedShip,TICONDEROGA,
+GT.attribute = {wsType_Navy,wsType_Ship,wsType_ArmedShip,wsType_GenericLightArmoredShip,
                     "Cruisers",
                     "RADAR_BAND1_FOR_ARM",
 					"RADAR_BAND2_FOR_ARM",
                     "DetectionByAWACS",
 					"Datalink",
-					"Straight_in_approach_type",
                 };
 				
 GT.Categories = {
 					{name = "Armed Ship"},
 					{name = "HelicopterCarrier"}
 				};
-
-GT.Countries = { "USA", };
-
 GT.tags  =
 {
 	"Destroyer",
 }	
-				
-add_surface_unit(GT)				
+GT.Countries = { "USA" };				
