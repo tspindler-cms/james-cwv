@@ -9,25 +9,25 @@ Gytt_RIM2_Terrier = {
 
  	Escort 			= 3, -- Escort(Requires tracking?): 0 - no, 1 - launch aircraft, 2 - another aircraft, 3 - from the ground
 	Head_Type 		= 6, -- Seeker type code, in our case 6 is for Semi-active radar homing. 1 = Passive IR homing, 2 = Active Radar Homing
-	sigma 			= {90, 90, 90}, -- maximum aiming error in meters, in target coordinates. x - longitudinal axis of the target, y - vertical axis of the target, z - transverse axis of the target
+	sigma 			= {60, 60, 60}, -- maximum aiming error in meters, in target coordinates. x - longitudinal axis of the target, y - vertical axis of the target, z - transverse axis of the target
 	M 			    = 2500.0, -- Mass of the missile at launch
 	H_max 			= 24400.0, -- Maximum target altitude
 	H_min 			= 45.0, -- minimum target altitude
-	Diam 			= 34.0, -- Missile diameter in cm
-	Cx_pil 			= 2, -- "Cx like pendants" - Moment of inertia?? or HawaiianRyan: I presume this is a drag coefficient, likely related to ballistic coefficient.
+	Diam 			= 340.0, -- Missile diameter in mm
+	Cx_pil 			= 5, -- "Cx like pendants" - Moment of inertia?? or HawaiianRyan: I presume this is a drag coefficient, likely related to ballistic coefficient.
 	D_max 			= 19000.0, -- Maximum range firing at low altitude, in meters
 	D_min 			= 3000.0, -- minimum range in meters
 	Head_Form 		= 1, -- determines shape of the missile head for drag modeling; 0 for hemispherical, 1 for conical
 	Life_Time 		= 70.0, -- Battery life
-	Nr_max 			= 12, -- Maximum g when turning
+	Nr_max 			= 15, -- Maximum g when turning
 	v_min 			= 257.2225, -- Minimum speed in m/s
-	v_mid 			= 617.4, -- average speed in m/s
+	v_mid 			= 586.53, -- average speed in m/s
 	Mach_max 		= 1.8, -- maximum Mach of the missile
 	t_b 			= 0.0, -- Motor start delay
-	t_acc 			= 2.5, -- motor burn time
+	t_acc 			= 15.0, -- motor burn time
 	t_marsh 		= 15.0, -- cruise time, 0.0 if not applicable
-	Range_max 		= 19000.0, 
-	H_min_t 		= 40.0, -- minimum target height above the terrain, m.
+	Range_max 		= 22800.0, 
+	H_min_t 		= 50.0, -- minimum target height above the terrain, m.
 	Fi_start 		= 3.14152, -- angle of tracking and sighting at launch, in radians
 	Fi_rak 			= 3.14152, -- allowable angle of view of the target, in radians
 	Fi_excort 		= 2.0, -- tracking angle (sighting) of the target by the missile.
@@ -44,13 +44,15 @@ Gytt_RIM2_Terrier = {
 	Z_back_acc 		= 0.0,
 	tail_scale 	 	= 6.0,
 	Reflection 		= 0.25,
-	KillDistance 	= 13.0,
-	ccm_k0       	= 0.1,		
+	KillDistance 	= 15.0,
+	SeekerGen = 1,  -- Seeker generation
+	ccm_k0       	= 1,	-- Counter Countermeasures Probability Factor. Value = 0 - missile has absolutely resistance to countermeasures. Default = 1 (medium probability)		
+	supersonic_A_coef_skew = 0.01,
 
 	PN_coeffs = {3, 				-- Number of Entries
 				50000.0 ,1.0,		-- Less 5 km to target Pn = 1
 				100000.0, 0.5,		-- Between 10 and 5 km  to target, Pn smoothly changes from 0.5 to 1.0. 
-				200000.0, 0.0};		-- Between 20 and 10 km  to target, Pn smoothly changes from 0.2 to 0.5. Longer then 30 km Pn = 0.2.
+				200000.0, 0.2};		-- Between 20 and 10 km  to target, Pn smoothly changes from 0.2 to 0.5. Longer then 30 km Pn = 0.2.
 	
 	warhead = enhanced_a2a_warhead(93.0); 
 
@@ -77,8 +79,8 @@ GT_t.WS_t.Gytt_RIM2_Terrier.moveable = false
 GT_t.WS_t.Gytt_RIM2_Terrier.LN = {}
 GT_t.WS_t.Gytt_RIM2_Terrier.LN[1] = {}
 GT_t.WS_t.Gytt_RIM2_Terrier.LN[1].type = 4
-GT_t.WS_t.Gytt_RIM2_Terrier.LN[1].distanceMin = 1000
-GT_t.WS_t.Gytt_RIM2_Terrier.LN[1].distanceMax = 160000
+GT_t.WS_t.Gytt_RIM2_Terrier.LN[1].distanceMin = 500
+GT_t.WS_t.Gytt_RIM2_Terrier.LN[1].distanceMax = 19000
 GT_t.WS_t.Gytt_RIM2_Terrier.LN[1].reactionTime = 0.1
 GT_t.WS_t.Gytt_RIM2_Terrier.LN[1].launch_delay = 0.03
 GT_t.WS_t.Gytt_RIM2_Terrier.LN[1].reflection_limit = 0.02

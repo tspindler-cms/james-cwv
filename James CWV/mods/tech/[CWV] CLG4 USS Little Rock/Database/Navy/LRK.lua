@@ -331,7 +331,4 @@ GT.tags  =
 {
 	"Cruiser",
 };
-
-GT.Countries = {"USA"}
-
-add_surface_unit(GT)	
+GT.Countries = { "USA" };

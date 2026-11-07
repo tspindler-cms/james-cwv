@@ -316,8 +316,8 @@ __LN.BR = {{ connector_name = 'POINT_GUN_762mm_4_1',
 ws = GT_t.inc_ws()
 local first_Gytt_tracker_id = ws
 GT.WS[ws] = {
-	area = 'Mast',
-	--center = 'Radar_1',
+	--area = 'Mast',
+	center = 'Radar_1',
     omegaY = 2,
     omegaZ = 2,
     pidY = {p=100, i=0.05, d=12, inn = 50},
@@ -329,9 +329,8 @@ GT.WS[ws] = {
             distanceMin = 1,
             distanceMax = 190000,
             reactionTime = 2.0,
-            reflection_limit = 2.2,
+            reflection_limit = 1.0,
 			frequencyRange = {5.4e9,5.9e9},
-			--frequencyRange = {0.5e9, 0.58e9},
             ECM_K = 0.5,
             min_trg_alt = 5,
             max_trg_alt = 60000,

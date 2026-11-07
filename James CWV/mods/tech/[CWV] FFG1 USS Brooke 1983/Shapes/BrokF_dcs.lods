@@ -1,0 +1,8 @@
+model = {
+	lods = {		
+		{"BrokF_dcs.edm",1000.000000},
+		{"BrokF_5km_dcs.edm",3000.000000},	
+		{"BrokF_5km_dcs.edm",50000.000000}, 
+	};
+	collision_shell = "BrokF_coll_dcs.edm";
+}
